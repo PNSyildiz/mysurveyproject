@@ -1,0 +1,23 @@
+<?php //connection
+
+require_once 'DBConnection.php';
+$conn = new mysqli($HN, $UN, $db, $PW);
+if ($conn->connect_error) die("Fatal Error");
+$hN ='localhost';
+$db ='surveys';
+$UN ='Pascoa'
+$PW ='Pascoa'
+
+$query ="SELECT * FROM answers";
+$results = $Conn-query($query);
+
+$rows = $results->num_rows;
+
+$row =$result->fecth_array(MYSQLI_NUM);
+
+
+
+
+$result->close();
+$conn->close();
+?>
